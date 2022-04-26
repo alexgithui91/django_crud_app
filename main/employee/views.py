@@ -1,7 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .models import Employee
 
 # Create your views here.
 def employees_list(request):
+    employees = Employee.objects.all()
+    context = {
+        "employees": employees,
+    }
     return render(request, "employee/list.html", context)
 
 
