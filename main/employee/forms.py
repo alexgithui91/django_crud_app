@@ -17,7 +17,7 @@ class EmployeeForm(ModelForm):
 
         widgets = {
             "emp_name": forms.TextInput(
-                attrs={"class": "form-control", "placeholder": "Name"}
+                attrs={"class": "form-control", "placeholder": "Full Name"}
             ),
             "emp_email": forms.TextInput(
                 attrs={"class": "form-control", "placeholder": "Email"}
@@ -26,7 +26,7 @@ class EmployeeForm(ModelForm):
                 attrs={"class": "form-control", "placeholder": "Contact No."}
             ),
             "emp_role": forms.TextInput(
-                attrs={"class": "form-control", "placeholder": "Role"}
+                attrs={"class": "form-control", "placeholder": "Department"}
             ),
             "emp_salary": forms.TextInput(
                 attrs={"class": "form-control", "placeholder": "Salary"}
