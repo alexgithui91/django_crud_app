@@ -51,7 +51,7 @@ def delete_employee(request, pk):
 
     if request.method == "POST":
         employee.delete()
-        return redirect("employee-list")
+        return redirect("employees-list")
 
     context = {"employee": employee}
 
