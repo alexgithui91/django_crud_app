@@ -1,5 +1,3 @@
-<!-- ./employee/templates/employee/list.html -->
-
 {% extends 'base.html' %}
 
 {% block title %}
@@ -28,10 +26,10 @@
             <td>{{ emp.emp_contact }}</td>
             <td>{{ emp.emp_role }}</td>
             <td>{{ emp.emp_salary }}</td>
-            {% comment %} <td>
+            <td>
                 <a style="margin-right: 30px;" href="{% url 'edit-employee' emp.id %}">Edit</a>
                 <a href="{% url 'delete-employee' emp.id %}">Remove</a>
-            </td> {% endcomment %}
+            </td>
         </tr>
         {% endfor %}
     </tbody>
@@ -41,4 +39,3 @@
     <a href="{% url 'create-employee' %}"><button type="button" class="btn btn-primary">Create Employee</button></a>
 </div>
 {% endblock content %}
-view rawlist.html hosted with ❤ by GitHub
