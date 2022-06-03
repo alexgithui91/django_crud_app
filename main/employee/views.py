@@ -47,5 +47,12 @@ def edit_employee(request, pk):
 
 
 def delete_employee(request, pk):
-    context = ""
+    employee = Employee.objects.get(id=pk)
+
+    if request.method == "POST":
+        employee.delete()
+        return redirect("employee-list")
+
+    context = {"employee": employee}
+
     return render(request, "employee/delete.html", context)
